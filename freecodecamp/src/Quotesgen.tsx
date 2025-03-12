@@ -5,7 +5,7 @@ import { Quote } from "./assets/Types";
 const QuoteBox: React.FC = () => {
   const [quote, setQuote] = useState<Quote>({ content: "", author: "" });
 
-  // Function to fetch a new quote
+  
   const fetchQuote = async () => {
     try {
       const response = await axios.get("https://api.quotable.io/random");
@@ -16,7 +16,7 @@ const QuoteBox: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchQuote(); // Fetch a quote on first load
+    fetchQuote(); 
   }, []);
 
   return (
